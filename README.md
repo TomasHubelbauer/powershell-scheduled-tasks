@@ -5,5 +5,14 @@
 ```powershell
 $action = New-ScheduledTaskAction -Execute "notepad" -Argument "file.txt"
 $trigger = New-ScheduledTaskTrigger -Daily -At 1pm
-Register-ScheduledTask -Action $action -Trigger $trigger -TaskName "Tom: My Task" -Description "Tom's Task"
+Register-ScheduledTask -Action $action -Trigger $trigger -TaskName "Tom - My Task" -Description "Tom's Task"
+```
+
+Can't use `:` in the task name!
+
+## List
+
+```powershell
+Get-ScheduledTask
+Get-ScheduledTask -TaskName "Tom - *"
 ```

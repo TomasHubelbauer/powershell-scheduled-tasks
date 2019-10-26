@@ -14,5 +14,12 @@ Can't use `:` in the task name!
 
 ```powershell
 Get-ScheduledTask
+schtasks /query
 Get-ScheduledTask -TaskName "Tom - *"
 ```
+
+## Sources
+
+- https://support.microsoft.com/en-us/help/814596/how-to-use-schtasks-exe-to-schedule-tasks-in-windows-server-2003
+- https://docs.microsoft.com/en-us/powershell/module/scheduledtasks/set-scheduledtask
+- https://docs.microsoft.com/en-us/powershell/module/scheduledtasks

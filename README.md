@@ -23,3 +23,8 @@ Get-ScheduledTask -TaskName "Tom - *"
 - https://support.microsoft.com/en-us/help/814596/how-to-use-schtasks-exe-to-schedule-tasks-in-windows-server-2003
 - https://docs.microsoft.com/en-us/powershell/module/scheduledtasks/set-scheduledtask
 - https://docs.microsoft.com/en-us/powershell/module/scheduledtasks
+
+## To-Do
+
+- https://community.spiceworks.com/how_to/17736-run-powershell-scripts-from-task-scheduler
+- https://devblogs.microsoft.com/scripting/weekend-scripter-use-the-windows-task-scheduler-to-run-a-windows-powershell-script/

@@ -26,5 +26,6 @@ Get-ScheduledTask -TaskName "Tom - *"
 
 ## To-Do
 
-- https://community.spiceworks.com/how_to/17736-run-powershell-scripts-from-task-scheduler
-- https://devblogs.microsoft.com/scripting/weekend-scripter-use-the-windows-task-scheduler-to-run-a-windows-powershell-script/
+### https://community.spiceworks.com/how_to/17736-run-powershell-scripts-from-task-scheduler
+
+### https://devblogs.microsoft.com/scripting/weekend-scripter-use-the-windows-task-scheduler-to-run-a-windows-powershell-script/

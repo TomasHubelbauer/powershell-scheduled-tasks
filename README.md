@@ -4,8 +4,13 @@
 
 ```powershell
 $action = New-ScheduledTaskAction -Execute "notepad" -Argument "file.txt"
-$trigger = New-ScheduledTaskTrigger -Daily -At 1pm
-Register-ScheduledTask -Action $action -Trigger $trigger -TaskName "Tom - My Task" -Description "Tom's Task"
+$now = Get-Date
+$interval = New-TimeSpan -Seconds 5
+$forever = [System.TimeSpan]::MaxValue
+$trigger = New-ScheduledTaskTrigger -Once -At $now -RepetitionInterval $interval -RepetitionDuration $forever
+$settings = New-ScheduledTaskSettingsSet
+$task = New-ScheduledTask -Action $action -Trigger $trigger -Settings $settings
+Register-ScheduledTask -TaskName 'TEST' -InputObject $task
 ```
 
 Can't use `:` in the task name!
@@ -29,3 +34,7 @@ Get-ScheduledTask -TaskName "Tom - *"
 ### https://community.spiceworks.com/how_to/17736-run-powershell-scripts-from-task-scheduler
 
 ### https://devblogs.microsoft.com/scripting/weekend-scripter-use-the-windows-task-scheduler-to-run-a-windows-powershell-script/
+
+### Await Stack Overflow help on scheduling the task
+
+https://stackoverflow.com/q/59569150/2715716
